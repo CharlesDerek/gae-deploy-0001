@@ -1,7 +1,6 @@
 runtime: php72
 #Language For Entire Application
 #Above was originally written for python yaml reference but works for php runtimes
-api_version: 1
 
 default_expiration: "30d"
 
