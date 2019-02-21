@@ -7,6 +7,11 @@ default_expiration: "30d"
 
 handlers:
 #Url STATIC PARAMS Below For Each URL PATH TYPE
+- url: /
+  script: static/index.php
+
+- url: /index\.html
+  script:  static/index.html
 - url: /(.*\.(appcache|manifest))
   mime_type: text/cache-manifest
   static_files: static/\1
@@ -179,10 +184,3 @@ handlers:
   static_files: static/\1/index.html
   upload: static/(.+)/index.html
   expiration: "15m"
-
-# site root
-- url: /
-  static_files: static/index.html
-  upload: static/index.html
-  expiration: "15m"
-
