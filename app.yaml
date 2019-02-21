@@ -183,8 +183,7 @@ handlers:
 
 # site root
 - url: /
-  
-  script: static/index.php
-  upload: static/index.php
+  static_files: static/index.html
+  upload: static/index.html
   expiration: "15m"
 
