@@ -1,423 +1,212 @@
-<?php include "functions.php" ?>
-<?php include "includes/headerForMain.php" ?>
+
+<!DOCTYPE html><!-- Last Published: Wed Feb 13 2019 21:39:46 GMT+0000 (UTC) --><html data-wf-domain="mrgi-v2.webflow.io" data-wf-page="5ba2bdf9def5741638d25df5" data-wf-site="5b7c8e0ed7ae794bb9f49a4b"><head><meta charset="utf-8"/><title>Avocado Webflow UI Kit</title><meta content="Ultimate UI kit for Webflow Users" name="description"/><meta content="width=device-width, initial-scale=1" name="viewport"/><link href="https://uploads-ssl.webflow.com/5b7c8e0ed7ae794bb9f49a4b/css/mrgi-v2.46817119c.min.css" rel="stylesheet" type="text/css"/><script src="https://ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js" type="text/javascript"></script><script type="text/javascript">WebFont.load({  google: {    families: ["Montserrat:100,100italic,200,200italic,300,300italic,400,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic","Varela Round:400","Oswald:200,300,400,500,600,700","Roboto:300,regular,500"]  }});</script><!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" type="text/javascript"></script><![endif]--><script type="text/javascript">!function(o,c){var n=c.documentElement,t=" w-mod-";n.className+=t+"js",("ontouchstart"in o||o.DocumentTouch&&c instanceof DocumentTouch)&&(n.className+=t+"touch")}(window,document);</script><link href="https://uploads-ssl.webflow.com/5b7c8e0ed7ae794bb9f49a4b/5b7c8e0ed7ae793e0bf49a8e_favicon.png" rel="shortcut icon" type="image/x-icon"/><link href="https://daks2k3a4ib2z.cloudfront.net/img/webclip.png" rel="apple-touch-icon"/><script>function rTHttps(){var httpURL=window.location.hostname+window.location.pathname+window.location.search;var httpsURL="https://"+httpURL;window.location=httpsURL}if(window.location.protocol=="http:"){rTHttps()}else{null}</script>
+<style>
+/* Wobble Top */
+@-webkit-keyframes hvr-wobble-top {
+  16.65% {
+    -webkit-transform: skew(-12deg);
+    transform: skew(-12deg);
+  }
+  33.3% {
+    -webkit-transform: skew(10deg);
+    transform: skew(10deg);
+  }
+  49.95% {
+    -webkit-transform: skew(-6deg);
+    transform: skew(-6deg);
+  }
+  66.6% {
+    -webkit-transform: skew(4deg);
+    transform: skew(4deg);
+  }
+  83.25% {
+    -webkit-transform: skew(-2deg);
+    transform: skew(-2deg);
+  }
+  100% {
+    -webkit-transform: skew(0);
+    transform: skew(0);
+  }
+}
+@keyframes hvr-wobble-top {
+  16.65% {
+    -webkit-transform: skew(-12deg);
+    transform: skew(-12deg);
+  }
+  33.3% {
+    -webkit-transform: skew(10deg);
+    transform: skew(10deg);
+  }
+  49.95% {
+    -webkit-transform: skew(-6deg);
+    transform: skew(-6deg);
+  }
+  66.6% {
+    -webkit-transform: skew(4deg);
+    transform: skew(4deg);
+  }
+  83.25% {
+    -webkit-transform: skew(-2deg);
+    transform: skew(-2deg);
+  }
+  100% {
+    -webkit-transform: skew(0);
+    transform: skew(0);
+  }
+}
+.hvr-wobble-top {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-transform-origin: 0 100%;
+  transform-origin: 0 100%;
+}
+.hvr-wobble-top:hover, .hvr-wobble-top:focus, .hvr-wobble-top:active {
+  -webkit-animation-name: hvr-wobble-top;
+  animation-name: hvr-wobble-top;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+}
+</style>
+
+
+
+
+
+
+
+
 <style>
 
-a.dropdownli:link
-{
-   color: #ffffff;
-   text-decoration: none;
+/* Bounce To Right */
+.hvr-bounce-to-right {
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
 }
-a.dropdownli:visited
-{
-   color: #ffffff;
-   text-decoration: none;
+.hvr-bounce-to-right:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #5748c5;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transform-origin: 0 50%;
+  transform-origin: 0 50%;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
 }
-a.dropdownli:hover
-{
-   color: #ffffff;
-   text-decoration: none;
+.hvr-bounce-to-right:hover, .hvr-bounce-to-right:focus, .hvr-bounce-to-right:active {
+  color: white;
 }
-a.dropdownli:active
-{
-   color: #ffffff;
-   text-decoration: none;
+.hvr-bounce-to-right:hover:before, .hvr-bounce-to-right:focus:before, .hvr-bounce-to-right:active:before {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+  -webkit-transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+  transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
 }
-a {
-  word-wrap: break-word!important;
-}a * {
-  white-space: initial;
-  } body {
-  word-wrap:break-word!important;
-  }
-</style>
-       
-        <div class="section">
-            <div class="container" data-ix="introfade">
-                <div class="imgcirclecontainerjumbot w-hidden-small w-hidden-tiny">
-                    <div class="iconmrgicirclejumbotron w-hidden-tiny" data-ix="iconmrgi2load"></div>
-                </div>
-                <h1 class="heading">MRGI<span class="text-span">(v.01)</span>
-                </h1>
-                <p class="paragraph paraMain"><em>Customized Software Creation for all platforms.</em> 
-                <!--Build beautiful yet powerful technology, no matter your industry or-->
-                <!--    profession. Automation in software is needed to enhance your businesses-->
-                <!--    efficiency and value.-->
-                    </p>
-                <!--<h1 class="transformexample-title"><em>Customized Software Creation for all platforms. </em></h1>-->
-                <div class="button-wrap">
-                    <a href="/connect_v2.php" class="button3neon w-button" data-ix="cardanimate">
-                        <h1 class="transformexample-title customctas"><em>Get A Quote</em></h1><em class="cta-main"><p class="paragraph"></p></em>
-                    </a>
-                    <a
-                        href="/"
-                        target="_blank"
-                        class="btn-hero btn-hero2 hvr-bounce-to-right w-button w--current">Contact Us</a>
-                </div>
-            </div>
-        </div>
-        <div class="section-main">
-            <div class="container">
-                <div class="row-2 w-row">
-                    <div class="column-3 w-col w-col-4">
-                        <div class="menu-card"><img
-                            src="https://uploads-ssl.webflow.com/5b7c8e0ed7ae794bb9f49a4b/5b7c8e0ed7ae791296f49a77_icon-2.png"
-                            width="70"
-                            alt=""/>
-                            <div class="text-block">Cards</div>
-                            <p class="paragraph-2">Simple cards for use in articles, blog post, email signup
-                                catchments and ecommerce sale cards</p>
-                        </div>
-                    </div>
-                    <div class="w-col w-col-4">
-                        <div class="menu-card"><img
-                            src="https://uploads-ssl.webflow.com/5b7c8e0ed7ae794bb9f49a4b/5b7c8e0ed7ae794f2af49a60_icon-3.png"
-                            width="70"
-                            alt=""/>
-                            <div class="text-block">Navigation Bars</div>
-                            <p class="paragraph-2">Various navigation bars, some with interaction and hover.css effects.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="w-col w-col-4">
-                        <div class="menu-card"><img
-                            src="https://uploads-ssl.webflow.com/5b7c8e0ed7ae794bb9f49a4b/5b7c8e0ed7ae791296f49a77_icon-2.png"
-                            width="70"
-                            alt=""/>
-                            <div class="text-block">Buttons</div>
-                            <p class="paragraph-2">Buttons for various use. Examples of primary buttons,
-                                default buttons, warning buttons etc.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="row-2 w-row">
-                    <div class="w-col w-col-4">
-                        <div class="menu-card"><img
-                            src="https://uploads-ssl.webflow.com/5b7c8e0ed7ae794bb9f49a4b/5b7c8e0ed7ae79971cf49a56_1.png"
-                            width="60"
-                            alt=""/>
-                            <div class="text-block">Colours</div>
-                            <p class="paragraph-2">Some nice website pallets to get you started.</p>
-                        </div>
-                    </div>
-                    <div class="w-col w-col-4">
-                        <div class="menu-card"><img
-                            src="https://uploads-ssl.webflow.com/5b7c8e0ed7ae794bb9f49a4b/5b7c8e0ed7ae79971cf49a56_1.png"
-                            width="60"
-                            alt=""/>
-                            <div class="text-block">Footers</div>
-                            <p class="paragraph-2">Various footers using different columns and approaches</p>
-                        </div>
-                    </div>
-                    <div class="w-col w-col-4">
-                        <div class="menu-card"><img
-                            src="https://uploads-ssl.webflow.com/5b7c8e0ed7ae794bb9f49a4b/5b7c8e0ed7ae79971cf49a56_1.png"
-                            width="60"
-                            alt=""/>
-                            <div class="text-block">Call to Actions</div>
-                            <p class="paragraph-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                Suspendisse varius enim in eros elementum tristique.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div>
-            <div id="Section-2" class="mainsection dark">
-                <div class="sectionheader">
-                    <h2 class="sectiontitle">See what is possible with 3D interactive Applications</h2>
-                    <a
-                        href="#"
-                        data-ix="arrow-appear"
-                        class="go-down-link paddingfixforarrow w-inline-block"><img
-                        src="https://uploads-ssl.webflow.com/5b7c8e0ed7ae794bb9f49a4b/5b7c8e83a54b267e6de62431_white-down-arrow-png-2%5B1%5D.png"
-                        width="50"
-                        data-ix="arrowhovereffect"
-                        alt=""/></a>
-                    <div class="text-block-14">Our developers are required to know not only how to
-                        develop useful applications, but also to develop ease of use interface for
-                        users. This makes 3-D interactive abilities for your business possible, with
-                        innovative 3-d ease in digital transitions.</div>
-                    <div class="text-block-14">See below a few examples of what are possible for the image of your business.</div>
-                    <div class="row-9 w-row">
-                        <div class="w-col w-col-4">
-                            <div class="transformexample">
-                                <div data-ix="basic-move" class="transformcontainer">
-                                    <div class="transformgroup">
-                                        <div class="transformbox_1"></div>
-                                        <div class="transformbox_2"></div>
-                                        <div class="transformbox_3 inv"></div>
-                                    </div>
-                                </div>
-                                <h1 class="transformexample-title">Move in 3D</h1>
-                                <div class="transformexample-subtitle">Layered elements between each other into a page.</div>
-                            </div>
-                        </div>
-                        <div class="w-col w-col-4">
-                            <div class="transformexample">
-                                <div data-ix="basic-rotate" class="transformcontainer">
-                                    <div class="transformgroup">
-                                        <div class="transformbox_1 inv"></div>
-                                        <div class="transformbox_2 colorgn"></div>
-                                        <div class="transformbox_3 inv"></div>
-                                    </div>
-                                </div>
-                                <h1 class="transformexample-title">Twist in 3D</h1>
-                                <div class="transformexample-subtitle">Create a rotating effect on your software content.</div>
-                            </div>
-                        </div>
-                        <div class="w-col w-col-4">
-                            <div class="transformexample">
-                                <div data-ix="basic-perspective" class="transformcontainer">
-                                    <div class="transformgroup">
-                                        <div class="transformbox_1"></div>
-                                        <div class="transformbox_2 colorbl"></div>
-                                        <div class="transformbox_3 colorbl2"></div>
-                                    </div>
-                                </div>
-                                <h1 class="transformexample-title">Apply Perspective</h1>
-                                <div class="transformexample-subtitle">Increase interactivity within your
-                                    application by making it&#x27;s content intensify.</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div>
-            <div id="Section-3" class="example bluebackground">
-                <div class="example-body minheight perspective--bottom">
-                    <div data-ix="example-header-appear" class="example-header w-container">
-                        <h5 class="example-subtitle">Responsive content</h5>
-                        <h2 class="example-title">Done right</h2>
-                        <div class="transformexample-subtitle">Make Content Easily view-able for all your customers.</div>
-                        <a href="#" data-ix="arrow-appear" class="go-down-link w-inline-block"><img
-                            src="https://uploads-ssl.webflow.com/5a04b009b12683000102a365/5a04b009b12683000102a375_white-down-arrow-png-2%5B1%5D.png"
-                            width="50"
-                            data-ix="arrowhovereffect"
-                            alt=""/></a>
-                    </div>
-                    <div class="showcase-container w-container">
-                        <div data-ix="example-showcase" class="showcase-wrapper">
-                            <div class="showcase-desktopwrapper">
-                                <div
-                                    data-ix="showcase-initial-appernce"
-                                    class="showcase-desktop w-hidden-small w-hidden-tiny"></div>
-                            </div>
-                            <div class="showcase-tabletwrapper">
-                                <div data-ix="showcase-initial-appernce" class="showcase-tablet"></div>
-                            </div>
-                            <div class="showcase-mobilewrapper">
-                                <div data-ix="showcase-initial-appernce" class="showcase-mobile"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div>
-            <div id="Section-4-main" class="example greenbackground">
-                <div class="example-body layer-perspective">
-                    <div data-ix="example-header-appear" class="example-header w-container">
-                        <h5 class="example-subtitle">Make sense out of what your users are saying and
-                            doing with Layered Data Analysis Solutions.</h5>
-                        <h2 class="example-title">3-D Layering data solutions</h2>
-                        <a href="#" data-ix="arrow-appear" class="go-down-link w-inline-block"><img
-                            src="https://uploads-ssl.webflow.com/5b7c8e0ed7ae794bb9f49a4b/5b7c8e83a54b267e6de62431_white-down-arrow-png-2%5B1%5D.png"
-                            width="50"
-                            data-ix="arrowhovereffect"
-                            alt=""/></a>
-                    </div>
-                    <div data-ix="layer-animation" class="layered-container"><img
-                        src="https://uploads-ssl.webflow.com/5b7c8e0ed7ae794bb9f49a4b/5b7c8e77ac90f3304263094b_566fb9dc1b4525b47c0c254d_3d_layer%25203%5B1%5D.svg"
-                        alt=""
-                        class="layer-1"/><img
-                        src="https://uploads-ssl.webflow.com/5b7c8e0ed7ae794bb9f49a4b/5b7c8e77ac90f3e8d963094c_566fb9dc1b4525b47c0c254c_3d_layer%25202%5B1%5D.svg"
-                        alt=""
-                        class="layer-2"/><img
-                        src="https://uploads-ssl.webflow.com/5b7c8e0ed7ae794bb9f49a4b/5b7c8e77ac90f31b63630949_566fb9dc1b4525b47c0c2550_3d-04%5B1%5D.svg"
-                        alt=""
-                        class="layer-3"/><img
-                        src="https://uploads-ssl.webflow.com/5b7c8e0ed7ae794bb9f49a4b/5b7c8e77ac90f33ac563094a_566fb9dc1b4525b47c0c254f_3d-05%5B1%5D.svg"
-                        alt=""
-                        class="layer-4"/></div>
-                </div>
-            </div>
-        </div>
-        <div>
-            <div id="Section-5" class="example purplebackground">
-                <div class="example-body perspective">
-                    <div class="example-header w-container">
-                        <h5 class="example-subtitle">Keeping your users ENGAGED, with Customize INteractive abilities.</h5>
-                        <h2 class="example-title">Enhance User Experiences</h2>
-                        <a href="#" data-ix="arrow-appear" class="go-down-link w-inline-block"><img
-                            src="https://uploads-ssl.webflow.com/5a04b009b12683000102a365/5a04b009b12683000102a375_white-down-arrow-png-2%5B1%5D.png"
-                            width="50"
-                            data-ix="arrowhovereffect"
-                            alt=""/></a>
-                    </div>
-                    <div class="cards w-row">
-                        <div class="w-col w-col-3 w-col-small-6 w-col-tiny-6">
-                            <div data-ix="example-card-flip" class="card-2">
-                                <div data-ix="example-card-appear-1" class="cardflip">
-                                    <div class="cardflip-side front"><img
-                                        src="https://uploads-ssl.webflow.com/5b7c8e0ed7ae794bb9f49a4b/5b7c920d9cd09b96340d8e98_566fb9dc1b4525b47c0c2514_cardflip-front-diamond%5B1%5D.svg"
-                                        alt=""
-                                        class="cardflip-image cardflipfront"/></div>
-                                    <div class="cardflip-side back"><img
-                                        src="https://uploads-ssl.webflow.com/5b7c8e0ed7ae794bb9f49a4b/5b7c920d9cd09b7dca0d8e9b_566fb9dc1b4525b47c0c2515_cardflip-back%5B1%5D.svg"
-                                        alt=""
-                                        class="cardflip-image"/></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="w-col w-col-3 w-col-small-6 w-col-tiny-6">
-                            <div data-ix="example-card-flip" class="card-2">
-                                <div data-ix="example-card-appear-2" class="cardflip">
-                                    <div class="cardflip-side front"><img
-                                        src="https://uploads-ssl.webflow.com/5a04b009b12683000102a365/5a04b009b12683000102a394_566fb9dc1b4525b47c0c2510_cardflip-front-circle%5B1%5D.svg"
-                                        alt=""
-                                        class="cardflip-image cardflipfront"/></div>
-                                    <div class="cardflip-side back"><img
-                                        src="https://uploads-ssl.webflow.com/5b7c8e0ed7ae794bb9f49a4b/5b7c920d9cd09b7dca0d8e9b_566fb9dc1b4525b47c0c2515_cardflip-back%5B1%5D.svg"
-                                        alt=""
-                                        class="cardflip-image"/></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="w-col w-col-3 w-col-small-6 w-col-tiny-6">
-                            <div data-ix="example-card-flip" class="card-2">
-                                <div data-ix="example-card-appear-3" class="cardflip">
-                                    <div class="cardflip-side front"><img
-                                        src="https://uploads-ssl.webflow.com/5a04b009b12683000102a365/5a04b009b12683000102a38f_566fb9dc1b4525b47c0c2512_cardflip-front-triangle%5B1%5D.svg"
-                                        alt=""
-                                        class="cardflip-image cardflipfront"/></div>
-                                    <div class="cardflip-side back"><img
-                                        src="https://uploads-ssl.webflow.com/5b7c8e0ed7ae794bb9f49a4b/5b7c920d9cd09b7dca0d8e9b_566fb9dc1b4525b47c0c2515_cardflip-back%5B1%5D.svg"
-                                        alt=""
-                                        class="cardflip-image"/></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="w-col w-col-3 w-col-small-6 w-col-tiny-6">
-                            <div data-ix="example-card-flip" class="card-2">
-                                <div data-ix="example-card-appear-4" class="cardflip">
-                                    <div class="cardflip-side front"><img
-                                        src="https://uploads-ssl.webflow.com/5a04b009b12683000102a365/5a04b009b12683000102a38e_566fb9dc1b4525b47c0c2511_cardflip-front-square%5B1%5D.svg"
-                                        alt=""
-                                        class="cardflip-image cardflipfront"/></div>
-                                    <div class="cardflip-side back"><img
-                                        src="https://uploads-ssl.webflow.com/5b7c8e0ed7ae794bb9f49a4b/5b7c920d9cd09b7dca0d8e9b_566fb9dc1b4525b47c0c2515_cardflip-back%5B1%5D.svg"
-                                        alt=""
-                                        class="cardflip-image"/></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div>
-            <div id="Section-6" class="example blue">
-                <div class="example-body miniheight">
-                    <div
-                        data-ix="example-header-appear"
-                        class="example-header isometric-paddingheaderfix w-container">
-                        <h5 class="example-subtitle">Give better service &amp; Stand out to your users
-                            with INNOVATIVE leading edge software technology</h5>
-                        <h2 class="example-title">Automate Timely Unnecessary tasks</h2>
-                        <a
-                            href="#"
-                            data-ix="arrow-appear"
-                            class="go-down-link paddingfixforarrow w-inline-block"><img
-                            src="https://uploads-ssl.webflow.com/5a04b009b12683000102a365/5a04b009b12683000102a375_white-down-arrow-png-2%5B1%5D.png"
-                            width="50"
-                            data-ix="arrowhovereffect"
-                            alt=""/></a>
-                    </div>
-                    <div data-ix="example-isometric" class="isometriccontainer">
-                        <div class="isometric-col-1">
-                            <div data-ix="isometrichover" class="isometric-item"></div>
-                            <div data-ix="isometrichover" class="isometric-item"></div>
-                            <div data-ix="isometrichover" class="isometric-item"></div>
-                        </div>
-                        <div class="isometric-col-2">
-                            <div data-ix="isometrichover" class="isometric-item"></div>
-                            <div data-ix="isometrichover" class="isometric-item"></div>
-                            <div data-ix="isometrichover" class="isometric-item"></div>
-                        </div>
-                        <div class="isometric-col-3">
-                            <div data-ix="isometrichover" class="isometric-item"></div>
-                            <div data-ix="isometrichover" class="isometric-item"></div>
-                            <div data-ix="isometrichover" class="isometric-item"></div>
-                        </div>
-                        <div class="isometric-col-4">
-                            <div data-ix="isometrichover" class="isometric-item"></div>
-                            <div data-ix="isometrichover" class="isometric-item"></div>
-                            <div data-ix="isometrichover" class="isometric-item"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div>
-            <div id="Section-7" class="example greenbackgrounddark">
-                <div class="example-body perspective miniheightnumber2">
-                    <div data-ix="example-header-appear" class="example-header w-container">
-                        <h5 class="example-subtitle">Make your different applications work SEAMLESSLY
-                            together for unity ACROSS your entire business</h5>
-                        <h2 class="example-title">Put your Content in Into perspective</h2>
-                        <a
-                            href="#"
-                            data-ix="arrow-appear"
-                            class="go-down-link paddingfixforarrow section7fix w-inline-block"><img
-                            src="https://uploads-ssl.webflow.com/5b7c8e0ed7ae794bb9f49a4b/5b7c8e83a54b267e6de62431_white-down-arrow-png-2%5B1%5D.png"
-                            width="50"
-                            data-ix="arrowhovereffect"
-                            alt=""/></a>
-                    </div>
-                    <div data-ix="example-tilt" class="tiltcontainer w-container">
-                        <div class="tilt-desktop"></div>
-                        <div class="tilt-tablet"></div>
-                        <div class="tilt-mobile"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div>
-            <div id="Section-8" class="example fadedtealbackground">
-                <div class="example-body perspective miniheightnumber2 w-clearfix">
-                    <div data-ix="example-header-appear" class="example-header w-container">
-                        <h5 class="example-subtitle">Create anything your heart can imagine with leading edge software and technology</h5>
-                        <h2 class="example-title">Think Outside the Box &amp; get connected</h2>
-                        <a
-                            href="#"
-                            data-ix="arrow-appear"
-                            class="go-down-link paddingfixforarrow w-inline-block"><img
-                            src="https://uploads-ssl.webflow.com/5b7c8e0ed7ae794bb9f49a4b/5b7c8e83a54b267e6de62431_white-down-arrow-png-2%5B1%5D.png"
-                            width="50"
-                            data-ix="arrowhovereffect"
-                            alt=""
-                            class="bottomarrow"/></a>
-                    </div>
-                    <div class="cubewrapper">
-                        <div data-ix="example-cube" class="_3dcube">
-                            <div class="_3dcube-back"></div>
-                            <div class="_3dcube-top"></div>
-                            <div class="_3dcube-right"></div>
-                            <div class="_3dcube-left"></div>
-                            <div class="_3dcube-bottom"></div>
-                            <div class="_3dcube-front"></div>
-                        </div>
-                    </div>
-                    <a href="/connect_v2.php" class="button-cta quotecta w-button">Get In Touch</a>
-                </div>
-            </div>
-        </div>
 
-<?php include "includes/footer.php" ?>
-			
-			
-<script>console.log("This is in static dir.")</script>
-<!--This is in static dir-->
-<h1>This is in static dir</h1>
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<style>
+
+/* Underline From Left */
+.hvr-underline-from-left {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+  overflow: hidden;
+}
+.hvr-underline-from-left:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  right: 100%;
+  bottom: 0;
+  background: #5748c5;
+  height: 4px;
+  -webkit-transition-property: right;
+  transition-property: right;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.hvr-underline-from-left:hover:before, .hvr-underline-from-left:focus:before, .hvr-underline-from-left:active:before {
+  right: 0;
+}
+</style>
+
+
+<style>
+
+/* Pop */
+@-webkit-keyframes hvr-pop {
+  50% {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+  }
+}
+@keyframes hvr-pop {
+  50% {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+  }
+}
+.hvr-pop {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+.hvr-pop:hover, .hvr-pop:focus, .hvr-pop:active {
+  -webkit-animation-name: hvr-pop;
+  animation-name: hvr-pop;
+  -webkit-animation-duration: 0.3s;
+  animation-duration: 0.3s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+}
+
+
+</style></head><body class="body"><div data-collapse="medium" data-animation="over-right" data-duration="1000" class="navbar w-nav" data-ix="navload"><div class="menu-container"><a href="/" class="brand w-nav-brand w--current"><div class="iconmrgicircle" data-ix="iconmrgicircle"></div><h1 class="heading-10">MRGI</h1></a><nav role="navigation" class="nav-menu w-nav-menu"><a href="/menu" class="nav-link cool-link w-nav-link">Menu</a><a href="/connect" class="nav-link cool-link w-nav-link">Contact</a><div data-delay="0" data-hover="1" class="w-dropdown"><div class="dropdown-toggle w-dropdown-toggle"><div class="text-block-13"><strong>Software</strong></div></div><nav class="dropdown-list w-dropdown-list"><a href="#" class="dropdown-link w-dropdown-link">CMS Modules</a><a href="#" class="dropdown-link w-dropdown-link">Wordpress Apps</a><a href="#" class="dropdown-link w-dropdown-link">Web Development</a><a href="/menu-adminpage" class="dropdown-link w-dropdown-link">AdminsDash</a></nav></div><div data-delay="0" data-hover="1" class="w-dropdown"><div class="dropdown-toggle w-dropdown-toggle"><div class="text-block-13"><strong>Users</strong></div></div><nav class="dropdown-list w-dropdown-list"><a href="#" class="dropdown-link w-dropdown-link">Login</a><a href="#" class="dropdown-link w-dropdown-link">Logout</a><a href="#" class="dropdown-link w-dropdown-link">Register!</a><a href="#" class="dropdown-link w-dropdown-link">Administers</a></nav></div><form action="/search" class="searchmobile w-hidden-main w-form"><input type="search" class="search-input w-input" maxlength="256" name="query" placeholder="Search…" id="search" required=""/><input type="submit" value="⚲ " class="search-button w-button"/></form></nav><div class="menu-button-3 w-nav-button" data-ix="hambopenclose"><div class="hamburgerdiv1"></div><div class="hamburgerdiv1_2"></div><div class="hamburgerdiv2"></div><div class="hamburgerdiv3"></div></div></div></div><div class="section"><div class="container" data-ix="introfade"><div class="imgcirclecontainerjumbot w-hidden-small w-hidden-tiny"><div class="iconmrgicirclejumbotron w-hidden-tiny" data-ix="iconmrgi2load"></div></div><h1 class="heading">MRGI<span class="text-span">(v.01)</span></h1><p class="paragraph">MRGI is the ultimate software solution for small business owners. Build beautiful yet powerful technology, no matter your industry or profession. Automation in software is needed to enhance your businesses efficiency and value.</p><div class="button-wrap"><a href="/" class="button3neon w-button w--current" data-ix="cardanimate"><em class="cta-main">Connect with a local MRGI Software Agent.</em></a><a href="/" target="_blank" class="btn-hero btn-hero2 hvr-bounce-to-right w-button w--current">Contact Us</a></div></div></div><div class="section-main"><div class="container"><div class="row-2 w-row"><div class="column-3 w-col w-col-4"><div class="menu-card"><img src="https://uploads-ssl.webflow.com/5b7c8e0ed7ae794bb9f49a4b/5b7c8e0ed7ae791296f49a77_icon-2.png" width="70" alt=""/><div class="text-block">Cards</div><p class="paragraph-2">Simple cards for use in articles, blog post, email signup catchments and ecommerce sale cards</p></div></div><div class="w-col w-col-4"><div class="menu-card"><img src="https://uploads-ssl.webflow.com/5b7c8e0ed7ae794bb9f49a4b/5b7c8e0ed7ae794f2af49a60_icon-3.png" width="70" alt=""/><div class="text-block">Navigation Bars</div><p class="paragraph-2">Various navigation bars, some with interaction and hover.css effects. </p></div></div><div class="w-col w-col-4"><div class="menu-card"><img src="https://uploads-ssl.webflow.com/5b7c8e0ed7ae794bb9f49a4b/5b7c8e0ed7ae791296f49a77_icon-2.png" width="70" alt=""/><div class="text-block">Buttons</div><p class="paragraph-2">Buttons for various use. Examples of primary buttons, default buttons, warning buttons etc.</p></div></div></div><div class="row-2 w-row"><div class="w-col w-col-4"><div class="menu-card"><img src="https://uploads-ssl.webflow.com/5b7c8e0ed7ae794bb9f49a4b/5b7c8e0ed7ae79971cf49a56_1.png" width="60" alt=""/><div class="text-block">Colours</div><p class="paragraph-2">Some nice website pallets to get you started.</p></div></div><div class="w-col w-col-4"><div class="menu-card"><img src="https://uploads-ssl.webflow.com/5b7c8e0ed7ae794bb9f49a4b/5b7c8e0ed7ae79971cf49a56_1.png" width="60" alt=""/><div class="text-block">Footers</div><p class="paragraph-2">Various footers using different columns and approaches</p></div></div><div class="w-col w-col-4"><div class="menu-card"><img src="https://uploads-ssl.webflow.com/5b7c8e0ed7ae794bb9f49a4b/5b7c8e0ed7ae79971cf49a56_1.png" width="60" alt=""/><div class="text-block">Call to Actions</div><p class="paragraph-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. </p></div></div></div></div></div><div><div id="Section-2" class="mainsection dark"><div class="sectionheader"><h2 class="sectiontitle">See what is possible with 3D interactive Applications</h2><a href="#" data-ix="arrow-appear" class="go-down-link paddingfixforarrow w-inline-block"><img src="https://uploads-ssl.webflow.com/5b7c8e0ed7ae794bb9f49a4b/5b7c8e83a54b267e6de62431_white-down-arrow-png-2%5B1%5D.png" width="50" data-ix="arrowhovereffect" alt=""/></a><div class="text-block-14">Our developers are required to know not only how to develop useful applications, but also to develop ease of use interface for users. This makes 3-D interactive abilities for your business possible, with innovative 3-d ease in digital transitions.</div><div class="text-block-14">See below a few examples of what are possible for the image of your business.</div><div class="row-9 w-row"><div class="w-col w-col-4"><div class="transformexample"><div data-ix="basic-move" class="transformcontainer"><div class="transformgroup"><div class="transformbox_1"></div><div class="transformbox_2"></div><div class="transformbox_3 inv"></div></div></div><h1 class="transformexample-title">Move in 3D</h1><div class="transformexample-subtitle">Layered elements between each other into a page.</div></div></div><div class="w-col w-col-4"><div class="transformexample"><div data-ix="basic-rotate" class="transformcontainer"><div class="transformgroup"><div class="transformbox_1 inv"></div><div class="transformbox_2 colorgn"></div><div class="transformbox_3 inv"></div></div></div><h1 class="transformexample-title">Twist in 3D</h1><div class="transformexample-subtitle">Create a rotating effect on your software content.</div></div></div><div class="w-col w-col-4"><div class="transformexample"><div data-ix="basic-perspective" class="transformcontainer"><div class="transformgroup"><div class="transformbox_1"></div><div class="transformbox_2 colorbl"></div><div class="transformbox_3 colorbl2"></div></div></div><h1 class="transformexample-title">Apply Perspective</h1><div class="transformexample-subtitle">Increase interactivity within your application by making it&#x27;s content intensify.</div></div></div></div></div></div></div><div><div id="Section-3" class="example bluebackground"><div class="example-body minheight perspective--bottom"><div data-ix="example-header-appear" class="example-header w-container"><h5 class="example-subtitle">Responsive content</h5><h2 class="example-title">Done right</h2><div class="transformexample-subtitle">Make Content Easily view-able for all your customers.</div><a href="#" data-ix="arrow-appear" class="go-down-link w-inline-block"><img src="https://uploads-ssl.webflow.com/5a04b009b12683000102a365/5a04b009b12683000102a375_white-down-arrow-png-2%5B1%5D.png" width="50" data-ix="arrowhovereffect" alt=""/></a></div><div class="showcase-container w-container"><div data-ix="example-showcase" class="showcase-wrapper"><div class="showcase-desktopwrapper"><div data-ix="showcase-initial-appernce" class="showcase-desktop w-hidden-small w-hidden-tiny"></div></div><div class="showcase-tabletwrapper"><div data-ix="showcase-initial-appernce" class="showcase-tablet"></div></div><div class="showcase-mobilewrapper"><div data-ix="showcase-initial-appernce" class="showcase-mobile"></div></div></div></div></div></div></div><div><div id="Section-4-main" class="example greenbackground"><div class="example-body layer-perspective"><div data-ix="example-header-appear" class="example-header w-container"><h5 class="example-subtitle">Make sense out of what your users are saying and doing with Layered Data Analysis Solutions.</h5><h2 class="example-title">3-D Layering data solutions</h2><a href="#" data-ix="arrow-appear" class="go-down-link w-inline-block"><img src="https://uploads-ssl.webflow.com/5b7c8e0ed7ae794bb9f49a4b/5b7c8e83a54b267e6de62431_white-down-arrow-png-2%5B1%5D.png" width="50" data-ix="arrowhovereffect" alt=""/></a></div><div data-ix="layer-animation" class="layered-container"><img src="https://uploads-ssl.webflow.com/5b7c8e0ed7ae794bb9f49a4b/5b7c8e77ac90f3304263094b_566fb9dc1b4525b47c0c254d_3d_layer%25203%5B1%5D.svg" alt="" class="layer-1"/><img src="https://uploads-ssl.webflow.com/5b7c8e0ed7ae794bb9f49a4b/5b7c8e77ac90f3e8d963094c_566fb9dc1b4525b47c0c254c_3d_layer%25202%5B1%5D.svg" alt="" class="layer-2"/><img src="https://uploads-ssl.webflow.com/5b7c8e0ed7ae794bb9f49a4b/5b7c8e77ac90f31b63630949_566fb9dc1b4525b47c0c2550_3d-04%5B1%5D.svg" alt="" class="layer-3"/><img src="https://uploads-ssl.webflow.com/5b7c8e0ed7ae794bb9f49a4b/5b7c8e77ac90f33ac563094a_566fb9dc1b4525b47c0c254f_3d-05%5B1%5D.svg" alt="" class="layer-4"/></div></div></div></div><div><div id="Section-5" class="example purplebackground"><div class="example-body perspective"><div class="example-header w-container"><h5 class="example-subtitle">Keeping your users ENGAGED, with Customize INteractive abilities.</h5><h2 class="example-title">Enhance User Experiences</h2><a href="#" data-ix="arrow-appear" class="go-down-link w-inline-block"><img src="https://uploads-ssl.webflow.com/5a04b009b12683000102a365/5a04b009b12683000102a375_white-down-arrow-png-2%5B1%5D.png" width="50" data-ix="arrowhovereffect" alt=""/></a></div><div class="cards w-row"><div class="w-col w-col-3 w-col-small-6 w-col-tiny-6"><div data-ix="example-card-flip" class="card-2"><div data-ix="example-card-appear-1" class="cardflip"><div class="cardflip-side front"><img src="https://uploads-ssl.webflow.com/5b7c8e0ed7ae794bb9f49a4b/5b7c920d9cd09b96340d8e98_566fb9dc1b4525b47c0c2514_cardflip-front-diamond%5B1%5D.svg" alt="" class="cardflip-image cardflipfront"/></div><div class="cardflip-side back"><img src="https://uploads-ssl.webflow.com/5b7c8e0ed7ae794bb9f49a4b/5b7c920d9cd09b7dca0d8e9b_566fb9dc1b4525b47c0c2515_cardflip-back%5B1%5D.svg" alt="" class="cardflip-image"/></div></div></div></div><div class="w-col w-col-3 w-col-small-6 w-col-tiny-6"><div data-ix="example-card-flip" class="card-2"><div data-ix="example-card-appear-2" class="cardflip"><div class="cardflip-side front"><img src="https://uploads-ssl.webflow.com/5a04b009b12683000102a365/5a04b009b12683000102a394_566fb9dc1b4525b47c0c2510_cardflip-front-circle%5B1%5D.svg" alt="" class="cardflip-image cardflipfront"/></div><div class="cardflip-side back"><img src="https://uploads-ssl.webflow.com/5b7c8e0ed7ae794bb9f49a4b/5b7c920d9cd09b7dca0d8e9b_566fb9dc1b4525b47c0c2515_cardflip-back%5B1%5D.svg" alt="" class="cardflip-image"/></div></div></div></div><div class="w-col w-col-3 w-col-small-6 w-col-tiny-6"><div data-ix="example-card-flip" class="card-2"><div data-ix="example-card-appear-3" class="cardflip"><div class="cardflip-side front"><img src="https://uploads-ssl.webflow.com/5a04b009b12683000102a365/5a04b009b12683000102a38f_566fb9dc1b4525b47c0c2512_cardflip-front-triangle%5B1%5D.svg" alt="" class="cardflip-image cardflipfront"/></div><div class="cardflip-side back"><img src="https://uploads-ssl.webflow.com/5b7c8e0ed7ae794bb9f49a4b/5b7c920d9cd09b7dca0d8e9b_566fb9dc1b4525b47c0c2515_cardflip-back%5B1%5D.svg" alt="" class="cardflip-image"/></div></div></div></div><div class="w-col w-col-3 w-col-small-6 w-col-tiny-6"><div data-ix="example-card-flip" class="card-2"><div data-ix="example-card-appear-4" class="cardflip"><div class="cardflip-side front"><img src="https://uploads-ssl.webflow.com/5a04b009b12683000102a365/5a04b009b12683000102a38e_566fb9dc1b4525b47c0c2511_cardflip-front-square%5B1%5D.svg" alt="" class="cardflip-image cardflipfront"/></div><div class="cardflip-side back"><img src="https://uploads-ssl.webflow.com/5b7c8e0ed7ae794bb9f49a4b/5b7c920d9cd09b7dca0d8e9b_566fb9dc1b4525b47c0c2515_cardflip-back%5B1%5D.svg" alt="" class="cardflip-image"/></div></div></div></div></div></div></div></div><div><div id="Section-6" class="example blue"><div class="example-body miniheight"><div data-ix="example-header-appear" class="example-header isometric-paddingheaderfix w-container"><h5 class="example-subtitle">Give better service &amp; Stand out to your users with INNOVATIVE leading edge software technology</h5><h2 class="example-title">Automate Timely Unnecessary tasks</h2><a href="#" data-ix="arrow-appear" class="go-down-link paddingfixforarrow w-inline-block"><img src="https://uploads-ssl.webflow.com/5a04b009b12683000102a365/5a04b009b12683000102a375_white-down-arrow-png-2%5B1%5D.png" width="50" data-ix="arrowhovereffect" alt=""/></a></div><div data-ix="example-isometric" class="isometriccontainer"><div class="isometric-col-1"><div data-ix="isometrichover" class="isometric-item"></div><div data-ix="isometrichover" class="isometric-item"></div><div data-ix="isometrichover" class="isometric-item"></div></div><div class="isometric-col-2"><div data-ix="isometrichover" class="isometric-item"></div><div data-ix="isometrichover" class="isometric-item"></div><div data-ix="isometrichover" class="isometric-item"></div></div><div class="isometric-col-3"><div data-ix="isometrichover" class="isometric-item"></div><div data-ix="isometrichover" class="isometric-item"></div><div data-ix="isometrichover" class="isometric-item"></div></div><div class="isometric-col-4"><div data-ix="isometrichover" class="isometric-item"></div><div data-ix="isometrichover" class="isometric-item"></div><div data-ix="isometrichover" class="isometric-item"></div></div></div></div></div></div><div><div id="Section-7" class="example greenbackgrounddark"><div class="example-body perspective miniheightnumber2"><div data-ix="example-header-appear" class="example-header w-container"><h5 class="example-subtitle">Make your different applications work SEAMLESSLY together for unity ACROSS your entire business</h5><h2 class="example-title">Put your Content in Into perspective</h2><a href="#" data-ix="arrow-appear" class="go-down-link paddingfixforarrow section7fix w-inline-block"><img src="https://uploads-ssl.webflow.com/5b7c8e0ed7ae794bb9f49a4b/5b7c8e83a54b267e6de62431_white-down-arrow-png-2%5B1%5D.png" width="50" data-ix="arrowhovereffect" alt=""/></a></div><div data-ix="example-tilt" class="tiltcontainer w-container"><div class="tilt-desktop"></div><div class="tilt-tablet"></div><div class="tilt-mobile"></div></div></div></div></div><div><div id="Section-8" class="example fadedtealbackground"><div class="example-body perspective miniheightnumber2 w-clearfix"><div data-ix="example-header-appear" class="example-header w-container"><h5 class="example-subtitle">Create anything your heart can imagine with leading edge software and technology</h5><h2 class="example-title">Think Outside the Box &amp; get connected</h2><a href="#" data-ix="arrow-appear" class="go-down-link paddingfixforarrow w-inline-block"><img src="https://uploads-ssl.webflow.com/5b7c8e0ed7ae794bb9f49a4b/5b7c8e83a54b267e6de62431_white-down-arrow-png-2%5B1%5D.png" width="50" data-ix="arrowhovereffect" alt="" class="bottomarrow"/></a></div><div class="cubewrapper"><div data-ix="example-cube" class="_3dcube"><div class="_3dcube-back"></div><div class="_3dcube-top"></div><div class="_3dcube-right"></div><div class="_3dcube-left"></div><div class="_3dcube-bottom"></div><div class="_3dcube-front"></div></div></div><a href="/connect_v2.php" class="button-cta quotecta w-button">Get In Touch</a></div></div></div><div class="div-block-24"><h1 class="heading-2">MRGI V2 Is coming soon!</h1><p class="paragraph-small">www.mrginnovations.com/</p><div class="split-line"></div></div><div class="section-3"><div class="container-2"><div class="div-block-16 w-clearfix"><div class="w-clearfix"><h1 class="heading-8">Download the app via SMS</h1></div><div class="div-block-18"><div class="div-block-17"><div class="text-block-3">Enter your Phone</div></div><a href="#" class="button button-d w-button">Button Text</a></div></div></div></div><div class="footersection"><div class="footer-1 personal"><div class="footer-1-wrapper"><div class="footer-1-row w-row"><div class="footer-1-col w-col w-col-3 w-col-small-small-stack"><a href="#" class="mrgilogoanimated w-inline-block"><div class="animatedlogocircle" data-ix="iconmrgicirclefooter"></div><img src="https://uploads-ssl.webflow.com/5b7c8e0ed7ae794bb9f49a4b/5c648764a230df84a05dec5b_logo_animate.png" srcset="https://uploads-ssl.webflow.com/5b7c8e0ed7ae794bb9f49a4b/5c648764a230df84a05dec5b_logo_animate-p-500.png 500w, https://uploads-ssl.webflow.com/5b7c8e0ed7ae794bb9f49a4b/5c648764a230df84a05dec5b_logo_animate.png 578w" sizes="(max-width: 479px) 150px, (max-width: 767px) 300px, (max-width: 991px) 150px, 200px" alt="" class="logoanimatedfooter"/></a><p class="footer-1-para">MRGInnovations is the ultimate software solution for small businesses</p></div><div class="footer-1-col w-hidden-small w-hidden-tiny w-col w-col-2 w-col-small-small-stack"><h1 class="footer-1-link">Pages</h1><a href="https://webflow.com/?rfsn=1238427.48b8d" target="_blank" class="textlinks footer-1-s-link">Home</a></div><div class="footer-1-col w-hidden-small w-hidden-tiny w-col w-col-2 w-col-small-small-stack"><h1 class="footer-1-link">Company</h1><a href="/connect_v2.php" class="textlinks footer-1-s-link">Get Started</a><a href="/connect_v2.php" class="textlinks footer-1-s-link">Contact</a><a href="/" class="textlinks footer-1-s-link w--current">MRGI</a></div><div class="footer-1-col w-col w-col-2 w-col-small-small-stack"><h1 class="footer-1-link">Social</h1><a href="https://www.facebook.com/mrginnovations" target="_blank" class="button-social social-round w-button"></a><a href="https://www.instagram.com/MRGInnovations/" target="_blank" class="button-social mid social-round w-button"></a><a href="https://www.linkedin.com/company/mrginnovations/" target="_blank" class="button-social social-round w-button"></a></div><div class="footer-1-col w-hidden-small w-hidden-tiny w-col w-col-3 w-col-small-small-stack"><h1 class="footer-1-link">Join Our Newsletter</h1><div class="footer-1-form-block w-form"><form id="email-form-2" name="email-form-2" data-name="Email Form 2" class="form-2"><input type="text" class="footer-1-inbox w-input" maxlength="256" name="email-2" data-name="Email 2" id="email-2" required=""/><input type="submit" value="" data-wait="Please wait..." class="submit-button-3 w-button"/></form><div class="w-form-done"><div>Thank you! Your submission has been received!</div></div><div class="w-form-fail"><div>Oops! Something went wrong while submitting the form.</div></div></div></div></div><div class="footer-1-legal"><div class="footer-1-copywrite">© MRGInnovations 2018. All rights reserved.<br/><a href="#" class="link-5">Terms &amp; Conditions</a></div></div></div></div></div><script src="https://d1tdp7z6w94jbb.cloudfront.net/js/jquery-3.3.1.min.js" type="text/javascript" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script><script src="https://uploads-ssl.webflow.com/5b7c8e0ed7ae794bb9f49a4b/js/mrgi-v2.dc92acfb3.js" type="text/javascript"></script><!--[if lte IE 9]><script src="//cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif]--></body></html>
