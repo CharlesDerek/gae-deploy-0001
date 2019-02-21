@@ -1,0 +1,82 @@
+<?php 
+function CurrentLecture() {
+    global $connection;
+    
+    $LectureWeAreOn = "Custom Software For Clients";
+    $exactTime = "0:00";
+    $SectionWeAreOn = "<hr> <em>Client Edit Software</em>";
+    $SectionPath = "/connect_v2.php";
+    $udemyLink="https://www.udemy.com/php-for-complete-beginners-includes-msql-object-oriented/learn/v4/content";
+  
+        echo "<a href='$SectionPath' class='button3neon w-button'>Connect with a local MRGI Software Agent.</a>";
+    
+    
+    
+}
+function calculate(){echo 456 + 345;}
+
+   
+
+    function Navigation(){
+        
+        /* set_include_path( get_include_path() . PATH_SEPARATOR . $_SERVER['DOCUMENT_ROOT'] );*/
+        $activePage = ($_SERVER['DOCUMENT_ROOT']);
+        $rows = file($_SERVER['DOCUMENT_ROOT'].'/includes/navigation.txt');
+            echo "<ul class='nav'>";
+        foreach ($rows as $row) {
+            $nav = explode(":", $row);
+            $page = ($nav[0]);
+            $link = ($nav[1]);
+            if($link  == $activePage) {
+                echo "<li class='activeLink'><a href='{$link}' class='menu-link w-inline-block w-clearfix'>" . "<div class='menu-link-bg w-clearfix'><div class='text-block-2 cool-link'>" . substr($page,0,15)."<br>" . "</div></div>" ."</a></li>";
+            } else {
+            	echo  "<li><a href='{$link}' class='menu-link w-inline-block w-clearfix'>" . "<div class='menu-link-bg w-clearfix'><div class='text-block-2 cool-link'>" . substr($page,0,12)."..<br>" . "</div></div>" ."</a></li>";
+            }
+        }
+        echo "</ul>";
+    }
+
+    function NavigationNaked(){
+        $activePage = basename($_SERVER['DOCUMENT_ROOT']);
+        $rows = file($_SERVER['DOCUMENT_ROOT'].'/includes/navigation.txt');
+            echo "<ul class='nav'>";
+        foreach ($rows as $row) {
+            $nav = explode(":", $row);
+            $page = trim($nav[0]);
+            $link = trim($nav[1]);
+            echo "<li class='activeLink'><a class='button3neon w-button' href='{$link}'>" . $page ."</a></li>";
+        }
+    echo "</ul>";
+    }
+
+
+    function getTitle(){
+        
+        $activePage = basename($_SERVER['PHP_SELF']);
+        $rows = file('includes/navigation.txt');
+        foreach ($rows as $row) {
+            $nav = explode(":", $row);
+            $page = trim($nav[0]);
+            $link = trim($nav[1]);
+            if($link  == $activePage) {
+                echo $page;
+            } else {
+            }
+        }
+    }
+
+
+function HoverExpand() {
+    global $connection;
+  echo "data-ix=\"cardanimate\" style=\"transition: transform 1000ms ease 0s; transform: scaleX(1) scaleY(1);\"";
+}
+
+
+
+
+
+
+?>
+
+
+

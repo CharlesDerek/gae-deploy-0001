@@ -1,0 +1,65 @@
+<?php include "functions.php" ?>
+<?php include "includes/header.php" ?>
+<?php include "includes/OpenContainer.php" ?>
+
+
+
+	<p>
+		<h1>Section 4: Custom Functions</h1><br>
+		<?php CurrentLecture(); ?>
+		<a href="/passing_params_functions.php" >Passing Params functions page</a>
+	</p>
+	<br>
+	<p><a href="/return_values_functions.php" >Return Values functions page</a></p><br>
+	<p><a href="/scope.php" >Scopes of variables</a></p><br>
+
+	
+	
+	<?php  
+	
+function calculation(){
+	
+	$number1 = 20;
+	$number2 = 50;
+	$sum = $number1 + $number2;
+	return $sum;
+	
+	
+}
+
+$theSum = calculation();
+
+echo $theSum . "<br>";
+
+function Hola($hello){
+	
+	echo $hello;
+	
+	
+	
+	
+}
+
+hola('hey is that spanish?');
+
+/*  Step1: Define a function and make it return a calculation of 2 numbers
+
+
+
+	Step 2: Make a function that passes parameters and call it using parameter values
+
+
+ */
+
+	
+?>
+
+
+<br>
+<div class="button-wrap"><a href="/5.php" class="btn-hero w-button">Onto Section 5:</a><a href="/" target="_blank" class="btn-hero btn-hero2 hvr-bounce-to-right w-button w--current">Contact Us</a></div>
+
+
+
+
+<?php include "includes/CloseContainer.php" ?>
+<?php include "includes/footer.php" ?>

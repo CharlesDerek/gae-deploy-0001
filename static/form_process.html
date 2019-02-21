@@ -1,0 +1,48 @@
+<?php include "functions.php" ?>
+<?php include "includes/header.php" ?>
+<?php include "includes/OpenContainer.php" ?>
+
+	<p>
+		<h1>Form Process Page</h1><br>
+		<a href="/6.php" >Back to Section 6: Forms</a><br>
+		
+	</p>
+
+
+<?php
+
+if(isset($_POST['submit'])){
+	$usersNames = ["Edwin","Student", "Peter", "Samid", "Mohad", "Maria", "Jane", "Tom"];
+	$minimumChars = 5;
+	$maximumChars = 10;
+    
+$username = $_POST['username'];
+$password = $_POST['password'];
+
+
+} 
+if(strlen($username) < $minimumChars) {
+	echo "Username has to be longer than ".$minimumChars." characters.";
+}
+
+elseif (strlen($username) > $maximumChars) {
+	echo "Username has to be less than ".$maximumChars." characters.";
+}
+else {
+echo "Hello " . $username. ", nice to meet you! ";
+	
+}
+if (!in_array($username, $usersNames)) {
+	echo "It seems you are currently not qualified for a membership, we apologize for the inconvenience. Please come back again and try at a later time.";
+} else {
+	echo "We're so excited to have you on board!";
+}
+
+?>
+
+
+
+
+
+<?php include "includes/CloseContainer.php" ?>
+<?php include "includes/footer.php" ?>

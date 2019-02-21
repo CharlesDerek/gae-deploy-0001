@@ -1,0 +1,43 @@
+<?php include "functions.php" ?>
+<?php include "includes/header.php" ?>
+<?php include "includes/OpenContainer.php" ?>
+
+
+	<p>
+		<h1>Section 6: Using Form Data</h1><br>
+		<a href="/form.php" >Forms submission practice page</a><br>
+		<a href="/form_external.php" >Forms external practice page</a><br>
+	
+	</p>
+	<?php CurrentLecture(); ?>
+		<br>
+	<p>
+		<ul>
+			<li><b>Step 1:</b>  Make a form that submits one value to POST super global.</li>
+		</ul>
+	</p>
+	<br>
+	
+
+<?php  
+
+if(isset($_POST['submit'])) {
+	echo $_POST['submit'];
+}
+
+?>
+	
+	<form action="6.php" method="post">
+		<input type="submit" name="submit" value="SUBMIT"/>
+	</form>
+	
+
+
+<br>
+<div class="button-wrap"><a href="/7.php" class="btn-hero w-button">Onto Section 7:</a><a href="/" target="_blank" class="btn-hero btn-hero2 hvr-bounce-to-right w-button w--current">Contact Us</a></div>
+
+
+
+
+<?php include "includes/CloseContainer.php" ?>
+<?php include "includes/footer.php" ?>

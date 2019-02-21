@@ -1,0 +1,69 @@
+<?php include "functions.php" ?>
+<?php include "includes/header.php" ?>
+<?php include "includes/OpenContainer.php" ?>
+
+<?php
+
+if(isset($_POST['submit'])){
+	$usersNames = ["Edwin","Student", "Peter", "Samid", "Mohad", "Maria", "Jane", "Tom"];
+	$minimumChars = 5;
+	$maximumChars = 10;
+    
+$username = $_POST['username'];
+$password = $_POST['password'];
+
+
+} 
+if(strlen($username) < $minimumChars) {
+	echo "Username has to be longer than ".$minimumChars." characters.";
+}
+
+elseif (strlen($username) > $maximumChars) {
+	echo "Username has to be less than ".$maximumChars." characters.";
+}
+else {
+echo "Hello " . $username. ", nice to meet you! ";
+	
+}
+if (!in_array($username, $usersNames)) {
+	echo "It seems you are currently not qualified for a membership, we apologize for the inconvenience. Please come back again and try at a later time.";
+} else {
+	echo "We're so excited to have you on board!";
+}
+
+?>
+	<p>
+		<h1>Form submissions</h1><br>
+		<a href="/6.php" >Back to Section 6: Forms</a><br>
+		
+	</p>
+		<br>
+	<p>
+		<h3>Notes:</h3>
+		<ul>
+			<li><b>Step 1:</b>  Make a form that submits one value to POST super global.</li>
+		</ul>
+	</p>
+
+
+<form action="form.php" method="post">
+    <input type="text" name="username" placeholder="Enter Username" name=""/>
+    <input type="password" name="password" placeholder="Enter Password" /><br>
+    <input type="submit" name="submit"/>
+</form>
+	
+	
+	
+	<?php  
+
+/*  Step1: Make a form that submits one value to POST super global
+
+
+ */
+
+	
+?>
+
+
+<?php include "includes/CloseContainer.php" ?>
+<?php include "includes/footer.php" ?>

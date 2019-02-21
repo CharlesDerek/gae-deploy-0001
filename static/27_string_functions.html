@@ -1,0 +1,38 @@
+<?php include "functions.php" ?>
+<?php include "includes/header.php" ?>
+<?php include "includes/OpenContainer.php" ?>
+
+	<p><a href="/5.php" >Back to section 5, built in functions page</a></p><br>
+
+	<div>
+	    <p>
+	        <a target="_blank" href="https://secure.php.net/ref.strings" >Php reference to strings</a><br>
+	    </p>
+	</div>
+	<br>
+<?php 
+
+$string = "Hello student!"."<br>";
+
+echo "Original string function: ".$string."<br>";
+
+echo "<b>strlen() function:</b> returns the amount of characters a functions value holds such as $/string returning: ".strlen($string)."<br>";
+
+echo "<br>";
+
+echo "<b>strtoupper() function:</b> returns uppercase strings such as: ".strtoupper($string);
+
+echo "<br>";
+
+echo "<b>strtolower() function:</b> returns lowercase strings such as: ".strtolower($string);
+
+echo "<br>";
+
+
+?>
+
+
+
+
+<?php include "includes/CloseContainer.php" ?>
+<?php include "includes/footer.php" ?>

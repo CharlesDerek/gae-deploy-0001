@@ -1,0 +1,68 @@
+<?php include "functions.php" ?>
+<?php include "includes/header.php" ?>
+<?php include "includes/OpenContainer.php" ?>
+
+	<h1>Section 10:</h1>
+	
+	<?php CurrentLecture(); ?>
+	
+	<br><a href="/misc/class_car.php" class="btn-hero w-button">class_car.php link</a> 
+	<br><a href="/misc/class_car2.php" class="btn-hero w-button">class_car2.php link</a> 
+	<br><a href="/misc/class_car3.php" class="btn-hero w-button">class_car3.php link</a> 
+	<br><a href="/misc/class_inheritance.php" class="btn-hero w-button">class_inheritance.php link</a> 
+	<br><a href="/misc/class_constructor.php" class="btn-hero w-button">class_constructor.php link</a> 
+	<br><a href="/misc/class_access.php" class="btn-hero w-button">class_access.php link</a> 
+	<br><a href="/misc/class_static.php" class="btn-hero w-button">class_static.php link</a> 
+
+<div class="container">
+	<h5>Below is the exercise from section 10:</h5>	
+</div>
+
+<div class="container">
+	<article>
+		<?php 
+			class Dog {
+				var $eyeColor ="Blue";
+				var $noseColor = "Black";
+				var $furColor = "Brown";
+				
+				function ShowAll(){
+						echo $this->eyeColor . "<br>";
+						echo $this->noseColor . "<br>";
+						echo $this->furColor . "<br>";
+					
+				}
+			}
+			$pitbull = new Dog();
+			$pitbull->ShowAll();
+		?>
+	</article>
+</div>
+	<?php  
+
+	/*  Step 1: Use the Make a class called Dog
+
+		Step 2: Set some properties for Dog, Example, eye colors, nose, or fur color
+
+		Step 4: Make a method named ShowAll that echos all the properties
+
+		Step 5: Instantiate the class / create object and call it pitbull
+
+Step 6: Call the method ShowAll
+
+	
+
+		
+	*/
+	?>
+<div class="button-wrap">
+	<br><a href="/demo_app/opening_files.php" class="btn-hero w-button">Open demo_application</a>
+</div>
+
+
+
+
+
+
+<?php include "includes/CloseContainer.php" ?>
+<?php include "includes/footer.php" ?>

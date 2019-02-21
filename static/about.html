@@ -1,0 +1,92 @@
+
+
+<?php 
+
+
+
+
+    if (isset($_POST['submit'])) {
+        $plan = $_POST['Plan'];
+        $secretKey = "6Leqbm4UAAAAAFXFpGlXmK3rLbrcqu8Lp2ZXSFxQ";
+        $responseKey = $_POST['g-recaptcha-response'];
+        $userIP = $_SERVER['REMOTE_ADDR'];
+        
+        $url = "https://www.google.com/recaptcha/api/siteverify?secret=$secretKey&response=$responseKey&remoteip=$userIP";
+        $response = file_get_contents($url);
+        $response = JSON_decode($response);
+        
+                    
+        if ($response->success) {
+            echo "<div class=\"success-message-2 flash-fader-div\"><div><strong><em>Your request has been verified by reCAPTCHA</em></strong></div></div>";
+        } else {
+            echo "<div class=\"error-message flash-fader-div\"><div><strong><em>Your request has been denied by reCAPTCHA</em></strong></div></div>";
+        }
+        
+    }
+?>
+<?php include "functions.php" ?>
+<?php include "includes/headerForMain.php" /* was header original */ ?>
+
+
+
+                    <div class="sectionconnecthead">
+                        <div class="container">
+                            <h1 class="heading">Change the world multiplying your best decisions.</h1>
+                            <h1><?php
+                                        
+                                        echo "<h1>".$response."</h1>";
+                                        if ($response->success) {
+                                            echo "<h1>reCAPTCHA verification was good</h1>".$response."</h1>"; 
+                                        } else {
+                                            echo "<h1>".$response."</h1>"; 
+                                        }
+                                    ?></h1>
+                            
+                            <div class="button-wrap">
+                                <a href="/connect.php#FormBlockGetInTouch" class="btn-hero w-button">Get in touch</a>
+                                <a href="https://webflow.com/?rfsn=1238427.48b8d" target="_blank" class="btn-hero btn-hero2 hvr-bounce-to-right w-button">Gallery</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div id="Section-2" class="mainsection--about dark--about">
+                            <div class="sectionheader--about">
+                                <a href="/connect.php#FormBlockGetInTouch" data-ix="arrow-appear" class="go-down-link paddingfixforarrow w-inline-block"><img src="https://uploads-ssl.webflow.com/5b7c8e0ed7ae794bb9f49a4b/5b7c8e77ac90f3573e630947_white-down-arrow-png-2%5B1%5D.png" width="50" data-ix="arrowhovereffect"/></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div id="Section-3" class="example bluebackground">
+                            <div class="example-body minheight perspective--bottom">
+                                <div data-ix="responsive-image-open" class="responsiveimageopen"><img src="https://uploads-ssl.webflow.com/5b7c8e0ed7ae794bb9f49a4b/5b7d961e9706072e55693a08_xblock-04-mobile.png.pagespeed.ic.MgMyu72UCJ.png" class="mobileimg"/><img src="https://uploads-ssl.webflow.com/5b7c8e0ed7ae794bb9f49a4b/5b7d961e9706075ab8693a0a_xblock-04-pop-a.png.pagespeed.ic.puMUe5-2nw.png" class="_3dimagelayer-1a"/><img src="https://uploads-ssl.webflow.com/5b7c8e0ed7ae794bb9f49a4b/5b7d961e9706078ea8693a0c_xblock-04-desktop.png.pagespeed.ic.biPhfTfniS.png" width="307" class="desktopimg"/><img src="https://uploads-ssl.webflow.com/5b7c8e0ed7ae794bb9f49a4b/5b7d961e9706071013693a10_xblock-04-pop-b.png.pagespeed.ic.8XtDQ9QcmM_1.png" class="_3dimagelayer-2b"/><img src="https://uploads-ssl.webflow.com/5b7c8e0ed7ae794bb9f49a4b/5b7d961e9706072808693a0e_xblock-04-pop-c.png.pagespeed.ic.aMGEKfPoYo_1.png" class="_3dimagelayer-2c"/></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div id="Section-3" class="example bluebackground planssection">
+                            <div class="example-body minheight perspective--bottom adjustmobile3dheight">
+                                <div data-ix="example-header-appear" class="example-header--about w-container"><h1 id="Style-It" class="example-title">What We Do</h1>
+                                    <a href="/connect.php#FormBlockGetInTouch" data-ix="arrow-appear" class="go-down-link w-hidden-small w-hidden-tiny w-inline-block"><img src="https://uploads-ssl.webflow.com/5b7c8e0ed7ae794bb9f49a4b/5b7c8e77ac90f3573e630947_white-down-arrow-png-2%5B1%5D.png" width="50" data-ix="arrowhovereffect"/></a>
+                                    <h5 class="example-subtitle--about connectmargintop">MRGInnovations’s mobile software services unites years of combined experience to bring clients a simple, intuitive mobile application platforms their preference. Our highly efficient teams combines stability, hi-tech solutions, comprehensive analytics, and advanced marketing tools in easily customizable modules, allowing our clients to release powerful mobile applications at a lower cost and reduced development time. Our team has consistently produced more just mobile apps and software for than for many of our clients; Our team has provides opportunity for many companies competing on a budget to make drastic innovative results. We work across the entire company business model of taking an idea to a proper unified system to support entrepreneurs & challenger brands with innovation, validation, product sales strategy, software engineering, ongoing maintenance and further company growth. As a team, MRGInnovations is building a innovative hub for incredible ideas & innovations around the world.</h5>
+                                    <a href="/connect.php#FormBlockGetInTouch" data-ix="arrow-appear" class="go-down-link-mobile w-hidden-main w-hidden-medium w-inline-block"><img src="https://uploads-ssl.webflow.com/5b7c8e0ed7ae794bb9f49a4b/5b7c8e77ac90f3573e630947_white-down-arrow-png-2%5B1%5D.png" width="50" data-ix="arrowhovereffect"/></a>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="section-3">
+                        <div class="container-2">
+                            <div class="div-block-16 w-clearfix">
+                                <div class="w-clearfix">
+                                    <h1 class="heading-8">Download the app via SMS</h1>
+                                </div>
+                                <div class="div-block-18">
+                                    <div class="div-block-17">
+                                        <div class="text-block-3">Enter your Phone</div>
+                                    </div>
+                                    <a href="#" class="button button-d w-button">Button Text</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+<?php include "includes/footer.php" ?>

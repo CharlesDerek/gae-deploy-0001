@@ -1,0 +1,41 @@
+<?php include "functions.php" ?>
+<?php include "includes/header.php" ?>
+<?php include "includes/OpenContainer.php" ?>
+
+
+	<p>
+		<h1>Form submissions</h1><br>
+		<a href="/6.php" >Back to Section 6: Forms</a><br>
+		
+	</p>
+		<br>
+	<p>
+		<h3>Notes:</h3>
+		<ul>
+			<li><b>Step 1:</b>  Make a form that submits one value to POST super global.</li>
+		</ul>
+	</p>
+
+
+<form action="form_process.php" method="post">
+    <input type="text" name="username" placeholder="Enter Username" name=""/>
+    <input type="password" name="password" placeholder="Enter Password" /><br>
+    <input type="submit" name="submit"/>
+</form>
+	
+	
+	
+	<?php  
+
+/*  Step1: Make a form that submits one value to POST super global
+
+
+ */
+
+	
+?>
+
+
+
+<?php include "includes/CloseContainer.php" ?>
+<?php include "includes/footer.php" ?>

@@ -1,0 +1,47 @@
+<?php include "functions.php" ?>
+<?php 
+session_start();
+$_SESSION['message'] = "Hi student, This is a stored session about you.";
+
+$expiration = time() + (60*60*24*7);
+setcookie('TheName','This Is The Value!',$expiration);
+?>
+
+<?php include "includes/header.php" ?>
+<?php include "includes/OpenContainer.php" ?>
+
+<h1>Section 9: PHP and The Web</h1>
+<br>
+    <?php CurrentLecture(); ?>
+
+<br><a href="/get.php" class="btn-hero w-button">Get.php link</a><a href="/" target="_blank" class="btn-hero btn-hero2 hvr-bounce-to-right w-button w--current">Contact Us</a>
+<br><a href="/the_post.php" class="btn-hero w-button">The_post.php link</a><a href="/" target="_blank" class="btn-hero btn-hero2 hvr-bounce-to-right w-button w--current">Contact Us</a>
+<br><a href="/misc/cookies.php" class="btn-hero w-button">cookies.php link</a><a href="/" target="_blank" class="btn-hero btn-hero2 hvr-bounce-to-right w-button w--current">Contact Us</a>
+<br><a href="/misc/session1.php" class="btn-hero w-button">session1.php link</a><a href="/" target="_blank" class="btn-hero btn-hero2 hvr-bounce-to-right w-button w--current">Contact Us</a>
+<br>
+
+<ul>
+    <li><b>Part 1</b> - PHP Forms</li>
+    <li><b>Part 2</b> - URL/Links</li>
+    <li><b>Part 3</b> - Cookies</li>
+    <li><b>Part 4</b> - Sessions</li>
+</ul>
+
+<h4>Practice Instructions:</h4>
+<ol>
+    <li> Create a link saying Click Here, and set 
+    the link href to pass some parameters and use the GET super global to see it.</li>
+    <li> Set a cookie that expires in one week</li>
+    <li> Start a session and set it to value, any value you want.</li>
+</ol>
+	 
+
+
+
+<br>
+<div class="button-wrap"><a href="/10.php" class="btn-hero w-button">Onto Section 10: OOP Intro</a><a href="/" target="_blank" class="btn-hero btn-hero2 hvr-bounce-to-right w-button w--current">Contact Us</a></div>
+
+
+
+<?php include "includes/CloseContainer.php" ?>
+<?php include "includes/footer.php" ?>

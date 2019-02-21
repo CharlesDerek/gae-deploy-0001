@@ -1,0 +1,54 @@
+<?php include "functions.php" ?>
+<?php include "includes/header.php" ?>
+<?php include "includes/OpenContainer.php" ?>
+	<section class="content">
+		
+		
+
+
+<p>
+	<h1>Section 8: Security</h1><br>
+	<a href="/users/login.php" class="btn-hero w-button">Login page</a><a href="/" target="_blank" class="btn-hero btn-hero2 hvr-bounce-to-right w-button w--current">Contact Us</a>
+	<?php CurrentLecture(); ?>
+
+
+</p>
+	<br>
+	<div class="container">
+		<a href="https://php.net/manual/en/function.crypt.php" target="_blank" class="btn-hero w-button">PHP.Net encryption manual</a><a href="/" target="_blank" class="btn-hero btn-hero2 hvr-bounce-to-right w-button w--current">Contact Us</a>
+	</div>
+<ul>
+	<li><b>Step 1</b> - Make a variable with some text as value</li>
+	<li><b>Step 2</b> - Use crypt() function to encrypt it</li>
+	<li><b>Step 3</b> - Assign the crypt result to a variable</li>
+	<li><b>Step 4</b> - echo the variable</li>
+</ul>
+
+
+<?php 
+	$hashFormatting = "$2y$10$";
+	$password = "greenwolfspecter";
+	$salt = "hflsworhaldowehi";
+	$hashF_and_salt = $hashFormatting.$salt;
+	$password_encrypted = crypt($hashF_and_salt, $password);
+	
+	echo $password_encrypted;
+	
+?>
+		
+		
+
+
+
+
+
+
+<br>
+<div class="button-wrap"><a href="/9.php" class="btn-hero w-button">Onto Section 9:</a><a href="/" target="_blank" class="btn-hero btn-hero2 hvr-bounce-to-right w-button w--current">Contact Us</a></div>
+
+
+
+
+
+<?php include "includes/CloseContainer.php" ?>
+<?php include "includes/footer.php" ?>
